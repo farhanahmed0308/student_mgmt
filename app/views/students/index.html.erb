@@ -1,0 +1,23 @@
+<h1>This is index form</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>frist_name</th>
+            <th>last_name</th>
+            <th>email</th>
+            <th>DOB</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @students.each do |i|%>
+        <tr>
+            <td><%= i.first_name%></td>
+            <td><%= i.last_name%></td>
+            <td><%= i.email%></td>
+            <td><%= i.date_of_birth%></td>
+
+        </tr>
+        <% end %>
+    </tbody>
+</table>

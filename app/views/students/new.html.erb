@@ -1,20 +1,2 @@
-<h1>This is new form</h1>
-<%= form_with model: @studnet do |i|%>
-<div>
-    <%= i.label :first_name %><br>
-    <%= i.text_field :first_name, placeholder: "first_name"%>
-</div>
-<div>
-    <%= i.label :last_name %><br>
-    <%= i.text_field :last_name, placeholder: "last_name"%>
-</div>
-<div>
-    <%= i.label :email %><br>
-    <%= i.text_field :email, placeholder: "email"%>
-</div>
-<div>
-    <%= i.label :date_of_birth %><br>
-    <%= i.text_field :date_of_birth, placeholder: "date_of_birth"%>
-</div>
-<%= i.submit%>
-<% end %>
+
+<%= render "form"%>

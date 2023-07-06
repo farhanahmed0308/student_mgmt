@@ -17,3 +17,6 @@ puts "studnet #{i} created successfully"
         date_of_birth: "DOB of #{i + 1} student"
     )
 end
+a = nil
+b = 5
+ a || = b

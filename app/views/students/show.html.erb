@@ -3,4 +3,6 @@
 <p><strong>Age: </strong><%= @student.age%></p>
 
 <p><strong>email: </strong><%= @student.email%></p>
-<p><strong>DOB: </strong><%= @student.date_of_birth%></p>
+<% if @student.date_of_birth.present?%>
+<p><strong>DOB: </strong><%= formated_date(@student.date_of_birth)%></p>
+<%end%>

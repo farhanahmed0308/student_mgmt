@@ -9,12 +9,12 @@ class StudentsController < ApplicationController
     end
 
     def new
-        @studnet = Student.new
+        @student = Student.new
     end
     def create
         @student = Student.new(student_param)
         if @student.save
-            redirect_to students_path
+            redirect_to @student
         else
             render "new"
         end      

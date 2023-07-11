@@ -7,5 +7,15 @@ Rails.application.routes.draw do
   # root "articles#index"
   # get "open", to: "pages#index" 
   root "pages#index"
-  resources :students
+  resources :students do
+    member do
+      get :personal_details
+    end
+    collection do
+      get :active
+    end
+  end
+  namespace :admin do 
+    resources :students
+  end
 end

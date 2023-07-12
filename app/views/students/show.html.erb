@@ -1,8 +1,18 @@
-<h1>This is show form</h1>
-<p><strong>Name: </strong> <%= @student.full_name%></p>
-<p><strong>Age: </strong><%= @student.age%></p>
 
-<p><strong>email: </strong><%= @student.email%></p>
-<% if @student.date_of_birth.present?%>
-<p><strong>DOB: </strong><%= formated_date(@student.date_of_birth)%></p>
-<%end%>
+<div class = "col-lg-10">
+    <div class="cards rounded-0 shadow">
+        <div class="cards-body">
+            <h1>This is show form</h1>
+
+            <p><strong>Name: </strong> <%= @student.full_name%></p>
+            <p><strong>Age: </strong><%= @student.age%></p>
+            
+            <p><strong>email: </strong><%= @student.email%></p>
+            <% if @student.date_of_birth.present?%>
+            <p><strong>DOB: </strong><%= formated_date(@student.date_of_birth)%></p>
+            <%end%>
+            <%= link_to "new", new_student_path, class: "btn btn-outline-success "%>
+
+        </div>
+    </div>
+</div>
